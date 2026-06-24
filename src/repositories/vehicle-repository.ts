@@ -77,12 +77,18 @@ class VehicleRepository {
     return value !== undefined && value <= max;
   }
 
+  private parseVehicleDate(value: string): Date {
+    const [day, month, year] = value.split("/").map(Number);
+
+    return new Date(year, month - 1, day);
+  }
+
   private isDateInRange(value: string, from?: string, to?: string): boolean {
     if (!from && !to) {
       return true;
     }
 
-    const date = new Date(value);
+    const date = this.parseVehicleDate(value);
 
     if (from && date < new Date(from)) {
       return false;
