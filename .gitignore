@@ -1,8 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Generated JavaScript / declaration files
 *.js
 !.eslintrc.js
 !jest.config.js
 *.d.ts
-node_modules
 
 # CDK asset staging directory
 .cdk.staging
