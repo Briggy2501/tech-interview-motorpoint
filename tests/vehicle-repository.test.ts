@@ -1,3 +1,4 @@
+import { describe, expect, it } from "@jest/globals";
 import VehicleRepository from "../src/repositories/vehicle-repository";
 import { testVehicles } from "./fixtures/vehicles";
 
